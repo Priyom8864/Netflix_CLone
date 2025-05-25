@@ -1,0 +1,367 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    background: #141414;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
+.hero {
+    background: linear-gradient(90deg, #141414 60%, #222 100%);
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #b3b3b3;
+}
+
+.movie-list {
+    width: 95%;
+    margin: 40px auto 0 auto;
+}
+
+.movie-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.movies-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 18px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #e50914 #181818;
+}
+
+.movies-row::-webkit-scrollbar {
+    height: 8px;
+    background: #181818;
+}
+.movies-row::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 4px;
+}
+
+.movie {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 200px;
+    max-width: 200px;
+    flex: 0 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(229,9,20,0.3);
+    z-index: 2;
+}
+
+.movie img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie h3 {
+    padding: 10px 8px 4px 8px;
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    background: none;
+    font-weight: 500;
+}
+
+.watch-btn {
+    margin: 8px 0 12px 0;
+    padding: 8px 0;
+    width: 85%;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.watch-btn:hover {
+    background: #f40612;
+}
+
+footer {
+    background: #181818;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-top: 1px solid #222;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.login-container button:hover {
+    background-color: #f40612;
+}
+
+.login-bg {
+    background: url('https://unsplash.com/photos/white-and-black-concrete-building-during-night-time-lI7dlA5VBp8') center center / cover no-repeat fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 0;
+}
+
+.login-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-logo {
+    width: 120px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.login-form {
+    background: rgba(0,0,0,0.75);
+    padding: 60px 68px 40px 68px;
+    border-radius: 4px;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.login-form h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 14px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.login-btn {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px 0;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #f6121d;
+}
+
+.login-or {
+    color: #b3b3b3;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 0.95rem;
+}
+
+.code-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.code-btn:hover {
+    background: #444;
+}
+
+.login-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.login-links .forgot {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.login-links .forgot:hover {
+    text-decoration: underline;
+}
+
+.login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.login-signup {
+    color: #b3b3b3;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.login-signup a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-signup a:hover {
+    text-decoration: underline;
+}
+
+.login-footer {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.login-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.login-footer ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.login-footer ul li a:hover {
+    text-decoration: underline;
+}
